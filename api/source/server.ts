@@ -2,8 +2,6 @@ import http from 'http';
 import express from 'express';
 import logging from './config/logging';
 import config from './config/config';
-import cors from 'cors';
-import ws from 'ws';
 import routes from './routes/post';
 import getroutes from './routes/get';
 

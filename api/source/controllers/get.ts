@@ -71,4 +71,37 @@ const getLangs = (req: Request, res: Response, next: NextFunction) => {
 		});
 };
 
+const getAbout = (req: Request, res: Response, next: NextFunction) => {
+	logging.info(NAMESPACE, 'Getting Languages');
+
+	let query = 'SELECT * FROM langs';
+
+	Connect()
+		.then((connection) => {
+			Query(connection, query)
+				.then((results) => {
+					return res.send(results);
+				})
+				.catch((err) => {
+					logging.error(NAMESPACE, err.message, err);
+
+					return res.status(500).json({
+						message: err.message,
+						err
+					});
+				})
+				.finally(() => {
+					connection.end();
+				});
+		})
+		.catch((err) => {
+			logging.error(NAMESPACE, err.message, err);
+
+			return res.status(500).json({
+				message: err.message,
+				err
+			});
+		});
+};
+
 export default { getSkills, getLangs };

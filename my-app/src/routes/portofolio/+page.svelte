@@ -54,7 +54,7 @@
 <main>
 	<div id="home" class="section">
 		<div id="landingPage">
-			<div id="title">Hello, I'm Gonçalo Lopes</div>
+			<div id="title">Hello! I'm Gonçalo Lopes</div>
 		</div>
 	</div>
 	<div id="about" class="section">

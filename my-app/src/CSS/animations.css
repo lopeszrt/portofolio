@@ -1,0 +1,28 @@
+@keyframes text-ghosting {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 100;
+	}
+}
+
+@keyframes hoverEffect {
+	from {
+		display: none;
+	}
+	to {
+		display: inherit;
+	}
+}
+
+@keyframes typing {
+	from {
+		background-color: inherit;
+		color: inherit;
+	}
+	to {
+		background-color: white;
+		color: #000;
+	}
+}

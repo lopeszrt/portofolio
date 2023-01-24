@@ -5,7 +5,6 @@ const NAMESPACE = 'POST Controller';
 const getTabs = (req: Request, res: Response, next: NextFunction) => {
 	logging.info(NAMESPACE, `Function get Tabs called!`);
 	let doc: string[] = JSON.parse(req.body as string);
-	// let doc = ['test1', 'test2'];
 	let sections: any[] = [];
 
 	doc.forEach((part) => {

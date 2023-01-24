@@ -1,4 +1,5 @@
 import http from 'http';
+import * as ws from 'ws';
 import express from 'express';
 import logging from './config/logging';
 import config from './config/config';
@@ -57,6 +58,7 @@ router.use((req, res, next) => {
 
 /** Create the server */
 const httpServer = http.createServer(router);
+const wss = new ws.Server({ server: httpServer });
 httpServer.listen(config.server.port, () =>
 	logging.info(NAMESPACE, `Server running on ${config.server.hostname}:${config.server.port}`)
 );

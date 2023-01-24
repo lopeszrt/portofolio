@@ -50,6 +50,7 @@
 <head>
 	<title>I'm Lopes</title>
 </head>
+
 <Header />
 <main>
 	<div id="home" class="section">
